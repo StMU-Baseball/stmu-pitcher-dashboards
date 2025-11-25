@@ -201,18 +201,20 @@
         .arsenal-table th {
             padding: 2px;
             text-align: center;
-            font-size: 12px;
+            font-size: 10px;
             font-weight: 600;
             color: #555;
             border-bottom: 0px solid #ddd;
             background: transparent;
+            white-space: nowrap;
         }
 
         .arsenal-table td {
-            padding: 0px 12px 0px 12px;
+            padding: 0px 6px 0px 6px;
             text-align: center;
-            font-size: 16px;
+            font-size: 13px;
             background: #ffffff;
+            white-space: nowrap;
         }
 
         .arsenal-table td:first-child {
@@ -389,6 +391,74 @@
         @media (max-width: 900px) {
             .dashboard-container {
                 grid-template-columns: 1fr;
+            }
+            
+            body {
+                padding: 10px;
+            }
+            
+            .pitcher-name {
+                font-size: 1.8em;
+                margin-bottom: 20px;
+            }
+            
+            .header {
+                margin-bottom: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.6em;
+            }
+            
+            .header img {
+                height: 50px;
+            }
+            
+            .card {
+                padding: 15px;
+            }
+            
+            .card h3 {
+                font-size: 1.1em;
+            }
+            
+            .section-title {
+                font-size: 0.85em;
+            }
+            
+            .arsenal-table th {
+                font-size: 8px;
+                padding: 1px 2px;
+            }
+            
+            .arsenal-table td {
+                font-size: 11px;
+                padding: 2px 3px;
+            }
+            
+            .arsenal-table td:first-child {
+                font-size: 10px;
+            }
+            
+            .controls {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px;
+            }
+            
+            button, select {
+                width: 100%;
+                padding: 12px;
+                font-size: 14px;
+            }
+            
+            .sequence-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .movement-chart-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
             }
         }
 
