@@ -390,129 +390,6 @@
             .dashboard-container {
                 grid-template-columns: 1fr;
             }
-            
-            body {
-                padding: 10px;
-            }
-            
-            .header {
-                flex-direction: column;
-                gap: 10px;
-                margin-bottom: 20px;
-            }
-            
-            .header img {
-                height: 60px;
-            }
-            
-            .header h1 {
-                font-size: 1.8em;
-            }
-            
-            .controls {
-                padding: 15px;
-                gap: 10px;
-            }
-            
-            select, button {
-                width: 100%;
-                padding: 12px;
-                font-size: 14px;
-            }
-            
-            .pitcher-name {
-                font-size: 1.8em;
-                margin-bottom: 20px;
-            }
-            
-            .card {
-                padding: 15px;
-            }
-            
-            .card h3 {
-                font-size: 1.2em;
-                margin-bottom: 15px;
-            }
-            
-            /* Make arsenal table scrollable on mobile */
-            .arsenal-table {
-                display: block;
-                overflow-x: auto;
-                white-space: nowrap;
-                -webkit-overflow-scrolling: touch;
-            }
-            
-            .arsenal-table thead,
-            .arsenal-table tbody,
-            .arsenal-table tr {
-                display: table;
-                width: 100%;
-                table-layout: fixed;
-            }
-            
-            .arsenal-table th,
-            .arsenal-table td {
-                font-size: 13px;
-                padding: 8px 4px;
-            }
-            
-            .arsenal-table th:first-child,
-            .arsenal-table td:first-child {
-                min-width: 80px;
-            }
-            
-            .arsenal-table th:not(:first-child),
-            .arsenal-table td:not(:first-child) {
-                min-width: 50px;
-            }
-            
-            .section-title {
-                font-size: 0.9em;
-            }
-            
-            .sequence-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .sequence-item {
-                font-size: 0.9em;
-                padding: 10px;
-            }
-            
-            .movement-chart-container {
-                height: 300px;
-            }
-            
-            .zone-section {
-                padding: 15px;
-            }
-        }
-        
-        /* Specific fixes for very small screens (iPhone SE, etc.) */
-        @media (max-width: 400px) {
-            .header h1 {
-                font-size: 1.5em;
-            }
-            
-            .header img {
-                height: 50px;
-            }
-            
-            .pitcher-name {
-                font-size: 1.5em;
-            }
-            
-            .arsenal-table th,
-            .arsenal-table td {
-                font-size: 11px;
-                padding: 6px 2px;
-            }
-            
-            button {
-                font-size: 12px;
-                padding: 10px;
-            }
         }
 
         .loading {
@@ -763,10 +640,13 @@
     </div>
 
     <div class="controls">
-        <button onclick="window.location.href='index.html'">🏠 All Pitchers</button>
-        <button 
-        <button onclick="window.location.href='Brandon_Vasquez_sequencing.html'">📝 Sequence Designer</button>
-        <button 
+        <select id="pitcherSelect">
+            <option value="">Loading pitchers...</option>
+        </select>
+        <button onclick="updateDashboard()">Update Dashboard</button>
+        <button onclick="window.location.href='pitch_location_analysis.html'">🎯 Location Analysis</button>
+        <button onclick="window.location.href='pitch_sequencing_designer.html'">📝 Sequence Designer</button>
+        <button onclick="window.location.href='velocity_monitoring.html'">📈 Velocity Monitoring</button>
         <button onclick="downloadPDF()">🖨️ Download PDF</button>
     </div>
 
